@@ -1,2 +1,2 @@
 # fhem
-this is fhem in docker
+this is fhem and homebridge in docker
