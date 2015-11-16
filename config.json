@@ -1,0 +1,19 @@
+{
+"bridge": {
+"name": "Homebridge",
+"username": "CC:22:3D:E3:CE:35",
+"port": 51826,
+"pin": "031-45-154"
+},
+"platforms": [
+{
+"platform": "homebridge-fhem.FHEM",
+"name": "FHEM",
+"server": "192.168.99.100",
+"port": "8083",
+"filter": "room=Homekit"
+}
+],
+"accessories": [
+]
+}
