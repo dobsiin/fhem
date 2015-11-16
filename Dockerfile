@@ -4,7 +4,7 @@ MAINTAINER dominikauer <dobsiin@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-CMD "sh" "-c" "echo nameserver 8.8.8.8 > /etc/resolv.conf"
+# CMD "sh" "-c" "echo nameserver 8.8.8.8 > /etc/resolv.conf"
 
 RUN apt-get update
 RUN apt-get -y --force-yes install wget apt-transport-https libavahi-compat-libdnssd-dev 
