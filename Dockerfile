@@ -48,6 +48,7 @@ RUN npm install -g homebridge-legacy-plugins
 RUN npm install -g git+https://github.com/justme-1968/homebridge-fhem.git
 
 # config.json for homebridge
+COPY fhem.cfg /opt/fhem/fhem.cfg
 COPY config.json /root/.homebridge/config.json
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
