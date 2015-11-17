@@ -4,6 +4,7 @@ MAINTAINER dominikauer <dobsiin@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
+# only for local install in kitematic
 # CMD "sh" "-c" "echo nameserver 8.8.8.8 > /etc/resolv.conf"
 
 RUN apt-get update
