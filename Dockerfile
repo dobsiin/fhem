@@ -5,7 +5,7 @@ MAINTAINER dominikauer <dobsiin@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update
-RUN apt-get -y --force-yes install wget git nano make gcc g++ apt-transport-https libavahi-compat-libdnssd-dev nodejs npm
+RUN apt-get -y --force-yes install wget git nano make gcc g++ apt-transport-https libavahi-compat-libdnssd-dev 
 # RUN apt-get update
 # RUN apt-get -y --force-yes install git nano make gcc g++
 # avahi-deamon?
@@ -37,8 +37,7 @@ RUN mkdir -p /var/log/supervisor
 RUN echo Europe/Berlin > /etc/timezone && dpkg-reconfigure tzdata
 
 # Install Homebridge
-# RUN wget https://nodejs.org/dist/latest-v0.12.x/node-v0.12.7-linux-x64.tar.gz -P /tmp && cd /usr/local && tar xzvf /tmp/node-v0.12.7-linux-x64.tar.gz --strip=1
-
+RUN wget https://nodejs.org/dist/latest-v0.12.x/node-v0.12.7-linux-x64.tar.gz -P /tmp && cd /usr/local && tar xzvf /tmp/node-v0.12.7-linux-x64.tar.gz --strip=1
 
 RUN ln -s /usr/local/bin/node /usr/bin/node
 
