@@ -13,6 +13,9 @@ docker run -d \
            dobsiin/fhem
 ```
 
+If you would like to run this Image on a Synology NAS you have to SSH into your NAS and
+use the parameter ```--net=host``` otherwise homebridge won't be visible from your homekit app.
+
 Currently homebridge won't start with supervisor.
 
 There is a problem with dns:
@@ -23,6 +26,9 @@ thats due to the fact that avahi-daemon is not started.
 
 ## Solution:
 
-/etc/init.d/dbus restart
+ - Fix avahi-daemon (use 'service avahi-daemon status' to see if it's running):
+	/etc/init.d/dbus restart
+	apt-get install --reinstall avahi-daemon
+	service avahi-daemon start
 
-service avahi-daemon start
+ - Remember that to restart avahi-daemon you can use 'service avahi-daemon restart', this may solve some dns issues. 
