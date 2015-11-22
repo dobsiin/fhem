@@ -40,7 +40,7 @@ RUN wget https://nodejs.org/dist/latest-v0.12.x/node-v0.12.7-linux-x64.tar.gz -P
 
 RUN ln -s /usr/local/bin/node /usr/bin/node
 
-# Install homebridge
+# Install homebridge -> /usr/local/bin/homebridge
 RUN cd /home && npm install -g homebridge
 # Install netatmo plugin
 RUN npm install -g homebridge-netatmo
