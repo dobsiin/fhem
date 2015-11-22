@@ -4,6 +4,7 @@ MAINTAINER dominikauer <dobsiin@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
+# Install dependencies
 RUN apt-get update
 RUN apt-get -y --force-yes install wget git nano make gcc g++ apt-transport-https libavahi-compat-libdnssd-dev
 
@@ -39,11 +40,10 @@ RUN wget https://nodejs.org/dist/latest-v0.12.x/node-v0.12.7-linux-x64.tar.gz -P
 
 RUN ln -s /usr/local/bin/node /usr/bin/node
 
-# from source install method
-# RUN cd /home && git clone https://github.com/nfarina/homebridge.git && cd homebridge && npm install
+# Install homebridge
 RUN cd /home && npm install -g homebridge
-# other plugins currently disabled
-# RUN npm install -g homebridge-legacy-plugins
+# Install netatmo plugin
+RUN npm install -g homebridge-netatmo
 # Install fhem plugin
 RUN npm install -g git+https://github.com/justme-1968/homebridge-fhem.git
 

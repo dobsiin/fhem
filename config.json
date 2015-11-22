@@ -12,6 +12,16 @@
 "server": "127.0.0.1",
 "port": "8083",
 "filter": "room=Homekit"
+},
+{
+"platform": "netatmo",
+"name": "netatmo weather",
+"ttl": 5,
+"auth": {
+"client_id": "test",
+"client_secret": "test",
+"username": "aue.dominik@gmail.com",
+"password": "test"}
 }
 ],
 "accessories": [

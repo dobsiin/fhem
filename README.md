@@ -1,6 +1,7 @@
 # Docker Container for FHEM and homebridge
 
 I'm running this container on my Synology DiskStation. Just for some Home Automation fun :)
+The plugins netatmo and fhem are installed.
 
 This docker image contains FHEM and homebridge and is based on Debian Jessie.
 
