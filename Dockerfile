@@ -56,7 +56,6 @@ VOLUME ["/opt/fhem"]
 
 # Ports
 EXPOSE 8083
-EXPOSE 8082
 EXPOSE 51826
 
 CMD ["/usr/bin/supervisord"]
