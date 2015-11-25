@@ -3,6 +3,7 @@ FROM debian:jessie
 MAINTAINER dominikauer <dobsiin@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
+ENV TERM xterm
 
 # Install dependencies
 RUN apt-get update
@@ -60,4 +61,4 @@ EXPOSE 51826
 
 COPY start.sh ./
 RUN chmod +x ./start.sh
-CMD ["/usr/bin/supervisord"]
+CMD ["./start.sh"]

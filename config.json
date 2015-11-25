@@ -11,17 +11,18 @@
 "name": "FHEM",
 "server": "127.0.0.1",
 "port": "8083",
-"filter": "room=Homekit"
+"filter": "room=Homekit",
+"auth": {"user": "dominik", "pass": "XXX"}
 },
 {
 "platform": "netatmo",
 "name": "netatmo weather",
 "ttl": 5,
 "auth": {
-"client_id": "test",
-"client_secret": "test",
+"client_id": "XXX",
+"client_secret": "XXX",
 "username": "aue.dominik@gmail.com",
-"password": "test"}
+"password": "XXX"}
 }
 ],
 "accessories": [
