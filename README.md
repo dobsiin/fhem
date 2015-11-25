@@ -33,3 +33,5 @@ thats due to the fact that avahi-daemon is not started.
 	service avahi-daemon start
 
  - Remember that to restart avahi-daemon you can use 'service avahi-daemon restart', this may solve some dns issues. 
+
+Currently trying to solve this problem..
