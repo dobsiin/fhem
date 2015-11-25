@@ -58,5 +58,6 @@ VOLUME ["/opt/fhem"]
 EXPOSE 8083
 EXPOSE 51826
 
+COPY start.sh ./
 RUN chmod +x ./start.sh
 CMD ["/usr/bin/supervisord"]
