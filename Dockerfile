@@ -7,7 +7,7 @@ ENV TERM xterm
 
 # Install dependencies
 RUN apt-get update
-RUN apt-get -y --force-yes install wget git nano make gcc g++ apt-transport-https libavahi-compat-libdnssd-dev
+RUN apt-get -y --force-yes install wget git nano make gcc g++ apt-transport-https libavahi-compat-libdnssd-dev sudo nodejs etherwake
 
 # Install perl packages
 RUN apt-get -y --force-yes install libalgorithm-merge-perl \
@@ -36,6 +36,9 @@ RUN mkdir -p /var/log/supervisor
 
 RUN echo Europe/Vienna > /etc/timezone && dpkg-reconfigure tzdata
 
+# Install LGTV2
+RUN npm install lgtv2
+
 # Install Homebridge
 RUN wget https://nodejs.org/dist/latest-v0.12.x/node-v0.12.9-linux-x64.tar.gz -P /tmp && cd /usr/local && tar xzvf /tmp/node-v0.12.9-linux-x64.tar.gz --strip=1
 
@@ -52,6 +55,7 @@ RUN npm install -g git+https://github.com/justme-1968/homebridge-fhem.git
 COPY fhem.cfg /opt/fhem/fhem.cfg
 COPY config.json /root/.homebridge/config.json
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY tvoff.js /node_modules/lgtv2/tvoff.js
 
 RUN chown fhem /opt/fhem/fhem.cfg
 
