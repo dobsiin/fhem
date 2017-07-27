@@ -2,9 +2,6 @@ FROM debian:jessie
 
 MAINTAINER dominikauer <dobsiin@gmail.com>
 
-ENV DEBIAN_FRONTEND noninteractive
-ENV TERM xterm
-
 # Install dependencies
 RUN apt-get update
 RUN apt-get -y --force-yes install wget git nano make gcc g++ apt-transport-https sudo
