@@ -1,8 +1,6 @@
-# Docker Container for FHEM
+# FHEM Docker
 
-I'm running this container on my Synology DiskStation. Just for some Home Automation fun :)
-
-This docker image contains FHEM and is based on Debian Jessie.
+I'm running this container on my Synology DiskStation 1513+. Just for some Home Automation fun :) This docker image contains FHEM and is based on Debian Jessie.
 
 ## Run:
 ```
@@ -12,6 +10,3 @@ docker run -d \
            -p 51826:51826 \
            dobsiin/fhem
 ```
-
-If you would like to run this Image on a Synology NAS you have to SSH into your NAS and
-use the parameter ```--net=host``` otherwise homebridge won't be visible from your homekit app.

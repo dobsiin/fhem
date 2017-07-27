@@ -4,7 +4,7 @@ MAINTAINER dominikauer <dobsiin@gmail.com>
 
 # Install dependencies
 RUN apt-get update
-RUN apt-get -y --force-yes install wget git nano make gcc g++ apt-transport-https sudo
+RUN apt-get -y --force-yes install supervisor telnet wget vim git nano make gcc g++ apt-transport-https sudo
 
 # Install perl packages
 RUN apt-get -y --force-yes install libalgorithm-merge-perl \
@@ -28,23 +28,18 @@ libterm-readline-perl-perl
 RUN wget -qO - https://debian.fhem.de/archive.key | apt-key add -
 RUN echo "deb https://debian.fhem.de/nightly ./" > /etc/apt/sources.list.d/fhem.list
 RUN apt-get update
-RUN apt-get -y --force-yes install supervisor fhem telnet
+RUN apt-get -y --force-yes install fhem
 RUN mkdir -p /var/log/supervisor
 
 RUN echo Europe/Vienna > /etc/timezone && dpkg-reconfigure tzdata
 
-# Install fhem plugin
-#RUN npm install -g git+https://github.com/justme-1968/homebridge-fhem.git
+# Install fhem plugin for homebridge
+# RUN npm install -g git+https://github.com/justme-1968/homebridge-fhem.git
 
-# fhem.cfg for fhem, config.json for homebridge and supervisord.conf for supervisor
-# COPY fhem.cfg /opt/fhem/fhem.cfg
-# COPY config.json /root/.homebridge/config.json
+# supervisord.conf for supervisor
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-# COPY tvoff.js /node_modules/lgtv2/tvoff.js
 
 RUN chown fhem /opt/fhem/fhem.cfg
-
-VOLUME ["/opt/fhem"]
 
 # Ports
 EXPOSE 8083
