@@ -1,9 +1,9 @@
-FROM debian:jessie
+FROM debian:stretch
 
-MAINTAINER dominikauer <dobsiin@gmail.com>
+MAINTAINER CaptainIgloo <joly.sebastien@gmail.com>
 
 # Install dependencies
-RUN apt-get update
+RUN apt-get update && apt-get install -y curl
 RUN apt-get -y --force-yes install supervisor telnet wget vim git nano make gcc g++ apt-transport-https sudo
 
 # Install perl packages
@@ -31,10 +31,7 @@ RUN apt-get update
 RUN apt-get -y --force-yes install fhem
 RUN mkdir -p /var/log/supervisor
 
-RUN echo Europe/Vienna > /etc/timezone && dpkg-reconfigure tzdata
-
-# Install fhem plugin for homebridge
-# RUN npm install -g git+https://github.com/justme-1968/homebridge-fhem.git
+RUN echo Europe/Paris > /etc/timezone && dpkg-reconfigure tzdata
 
 # supervisord.conf for supervisor
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
