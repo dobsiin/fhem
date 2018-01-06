@@ -33,9 +33,6 @@ RUN mkdir -p /var/log/supervisor
 
 RUN echo Europe/Paris > /etc/timezone && dpkg-reconfigure tzdata
 
-# Install fhem plugin for homebridge
-# RUN npm install -g git+https://github.com/justme-1968/homebridge-fhem.git
-
 # supervisord.conf for supervisor
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
