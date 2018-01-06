@@ -1,6 +1,6 @@
 FROM debian:stretch
 
-MAINTAINER CaptainIgloo <dobsiin@gmail.com>
+MAINTAINER CaptainIgloo <joly.sebastien@gmail.com>
 
 # Install dependencies
 RUN apt-get update && apt-get install -y curl
