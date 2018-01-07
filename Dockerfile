@@ -3,8 +3,8 @@ FROM debian:stretch
 MAINTAINER CaptainIgloo <joly.sebastien@gmail.com>
 
 # Install dependencies
-RUN apt-get update && apt-get install -y curl
-RUN apt-get -y --force-yes install supervisor telnet wget vim git nano make gcc g++ apt-transport-https sudo
+RUN apt-get update
+RUN apt-get -y --force-yes install supervisor telnet wget curl vim git nano make gcc g++ apt-transport-https sudo
 
 # Install perl packages
 RUN apt-get -y --force-yes install libalgorithm-merge-perl \
