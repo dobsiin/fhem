@@ -30,7 +30,7 @@ libterm-readline-perl-perl
 # Install fhem
 RUN wget -q https://debian.fhem.de/archive.key
 RUN apt-key add archive.key
-RUN echo "deb https://debian.fhem.de/stable ./" > /etc/apt/sources.list.d/fhem.list
+RUN echo "deb https://debian.fhem.de/nightly ./" > /etc/apt/sources.list.d/fhem.list
 RUN apt-get update
 RUN apt-get -y --force-yes install fhem
 RUN mkdir -p /var/log/supervisor
