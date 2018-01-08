@@ -24,8 +24,8 @@ libsocket-perl \
 libswitch-perl \
 libsys-hostname-long-perl \
 libterm-readkey-perl \
-libterm-readline-perl-perl\
-libdevice-serialport-perl\
+libterm-readline-perl-perl \
+libdevice-serialport-perl \
 libio-socket-ssl-perl
 
 
