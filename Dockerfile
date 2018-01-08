@@ -16,6 +16,7 @@ libfile-copy-recursive-perl \
 libfile-fcntllock-perl \
 libio-socket-ip-perl \
 libjson-perl \
+libnet-telnet-perl \
 libjson-xs-perl \
 libmail-sendmail-perl \
 libsocket-perl \
