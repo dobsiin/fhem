@@ -1,4 +1,6 @@
-FROM debian:stretch
+#FROM debian:stretch
+FROM debian:jessie
+
 
 MAINTAINER CaptainIgloo <joly.sebastien@gmail.com>
 
