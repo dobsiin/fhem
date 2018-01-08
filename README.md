@@ -1,6 +1,6 @@
 # FHEM Docker
 
-I'm running this container on my Synology DiskStation 1512+. This docker image contains FHEM and is based on Debian Stretch with few dependencies.
+I'm running this container on my Synology DiskStation 1512+. This docker image contains FHEM and is based on Debian Jessie with few dependencies.
 
 ## Run:
 ```
