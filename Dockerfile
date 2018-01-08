@@ -1,7 +1,6 @@
 FROM debian:latest
 #FROM debian:jessie
 
-
 MAINTAINER CaptainIgloo <joly.sebastien@gmail.com>
 
 # Install dependencies
