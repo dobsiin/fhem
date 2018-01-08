@@ -1,4 +1,4 @@
-debian:latest
+FROM debian:latest
 #FROM debian:jessie
 
 
