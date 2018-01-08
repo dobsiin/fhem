@@ -37,9 +37,7 @@ RUN echo Europe/Paris > /etc/timezone && dpkg-reconfigure tzdata
 
 # supervisord.conf for supervisor
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-
 RUN chown fhem /opt/fhem/fhem.cfg
-
 # Ports
 EXPOSE 8083
 
